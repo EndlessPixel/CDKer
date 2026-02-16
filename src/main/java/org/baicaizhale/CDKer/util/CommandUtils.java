@@ -59,6 +59,7 @@ public class CommandUtils {
      */
     public static String replaceCommandVariables(String command, Player player) {
         return command.replace("{player}", player.getName())
+                     .replace("%player%", player.getName())
                      .replace("{uuid}", player.getUniqueId().toString())
                      .replace("{world}", player.getWorld().getName())
                      .replace("{x}", String.valueOf(player.getLocation().getBlockX()))
