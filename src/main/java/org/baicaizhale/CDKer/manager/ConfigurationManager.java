@@ -91,6 +91,21 @@ public class ConfigurationManager {
         }
         languageConfigs.put("en_US", new LanguageConfig(enUsMessages));
         plugin.getLogger().info("Loaded lang_en_US.yml with " + enUsMessages.size() + " messages.");
+        
+        // Load Japanese language file (lang_ja_JP.yml)
+        File langJaJpFile = new File(plugin.getDataFolder(), "lang" + File.separator + "lang_ja_JP.yml");
+        if (!langJaJpFile.exists()) {
+            plugin.saveResource("lang" + File.separator + "lang_ja_JP.yml", false);
+        }
+        YamlConfiguration langJaJpYaml = YamlConfiguration.loadConfiguration(langJaJpFile);
+        Map<String, String> jaJpMessages = new HashMap<>();
+        for (String key : langJaJpYaml.getKeys(true)) {
+            if (langJaJpYaml.isString(key)) {
+                jaJpMessages.put(key, langJaJpYaml.getString(key));
+            }
+        }
+        languageConfigs.put("ja_JP", new LanguageConfig(jaJpMessages));
+        plugin.getLogger().info("Loaded lang_ja_JP.yml with " + jaJpMessages.size() + " messages.");
     }
 
     /**

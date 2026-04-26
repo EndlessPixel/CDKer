@@ -1,12 +1,12 @@
 # CDK配置
 cdk:
   # CDK字符集
-  charset: "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+  charset: "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
   # CDK长度
   length: 12
   # 默认兑换次数
   default-uses: 1
-  # 语言配置 (支持: zh_CN, en_US)
+  # 语言配置 (支持: zh_CN[中文], en_US[英文], ja_JP[日文])
   language: "zh_CN"
   # 消息前缀
   prefix: "&bCDKer &7> &f"

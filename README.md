@@ -51,12 +51,12 @@ CDKer 是一个运行在Spigot1.18+的Minecraft服务器插件，用于管理和
 # CDK配置
 cdk:
   # CDK字符集
-  charset: "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+  charset: "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
   # CDK长度
   length: 12
   # 默认兑换次数
   default-uses: 1
-  # 语言配置 (支持: zh_CN, en_US)
+  # 语言配置 (支持: zh_CN[中文], en_US[英文], ja_JP[日文])
   language: "zh_CN"
   # 消息前缀
   prefix: "&bCDKer &7> &f"
@@ -77,7 +77,7 @@ cdk:
 settings:
   # 插件消息前缀
   prefix: "§6[CDK] §f"
-  # 插件语言 (zh_CN 或 en_US)
+  # 插件语言 (zh_CN[中文], en_US[英文], ja_JP[日文])
   language: "zh_CN"
   # 是否启用调试模式
   debug: false
@@ -228,8 +228,8 @@ cdk:
 
 要从源代码构建插件，您需要：
 
-1. JDK 17 
-2. Apache Maven 3.6 
+1. Java JDK 17 +
+2. Apache Maven 3.6 + 或者 Gradle 7.4 8+
 
 构建步骤：
 ```bash
