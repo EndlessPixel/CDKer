@@ -238,14 +238,14 @@ cd CDKer
 mvn clean package
 ```
 
-构建后的JAR文件将位于 `target/` 目录中。
+默认构建为Maven项目，构建后的JAR文件将位于 `target/` 目录中。，如果您使用Gradle构建，构建后的JAR文件将位于 `build/libs/` 目录中。
 
 ## 贡献
 
 欢迎任何形式的贡献！如果您发现了bug或有改进建议，请提交[Issue](https://github.com/baicaizhale/CDKer/issues)或[Pull Request](https://github.com/baicaizhale/CDKer/pulls)。
 
 ## 第三方工具
-- [MC-CDKer-Generator](https://github.com/EndlessPixel/MC-CDKer-Generator)：一个简单的 CDK 批量生成脚本，支持自定义物品池和权重，采用20位随机字符串作为cdk代码，目前仅支持give
+- [MC-CDKer-Generator](https://github.com/EndlessPixel/MC-CDKer-Generator)：一个简单的 CDK 批量生成脚本，支持自定义物品池和权重，采用自定义长度的随机字符串作为cdk代码，目前仅支持give命令
 
 ## 许可证
 
