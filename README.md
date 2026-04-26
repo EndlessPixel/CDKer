@@ -165,12 +165,13 @@ permissions:
 
 #### 导入CDK
 ```
-/cdk import <文件> [replace|append]
+/cdk import <文件名> [replace|append]
 ```
+> 其中replace表示覆盖，append表示追加
 
 #### 导出CDK
 ```
-/cdk export <文件>
+/cdk export <文件名>
 ```
 
 ## 权限节点
@@ -241,9 +242,11 @@ mvn clean package
 
 ## 贡献
 
-欢迎任何形式的贡献！如果您发现了bug或有改进建议，请提交issue(https://github.com/baicaizhale/CDKer/issues)或pull request(https://github.com/baicaizhale/CDKer/pulls)。
+欢迎任何形式的贡献！如果您发现了bug或有改进建议，请提交[Issue](https://github.com/baicaizhale/CDKer/issues)或[Pull Request](https://github.com/baicaizhale/CDKer/pulls)。
 
+## 第三方工具
+- [MC-CDKer-Generator](https://github.com/EndlessPixel/MC-CDKer-Generator)：一个简单的 CDK 批量生成脚本，支持自定义物品池和权重，采用20位随机字符串作为cdk代码，目前仅支持give
 
 ## 许可证
 
-本项目采用MIT许可证，详情请见 [LICENSE](LICENSE) 文件。
+本项目采用MIT许可证开源，详情请见 [LICENSE](LICENSE) 文件。
