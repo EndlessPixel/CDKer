@@ -1,0 +1,32 @@
+plugins {
+    id 'java'
+    id 'maven-publish'
+}
+
+group = 'studio.winds'
+version = project.hasProperty('version') ? project.getProperty('version') : 'dev-SNAPSHOT'
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
+repositories {
+    mavenCentral()
+    maven { url "https://repo.papermc.io/repository/maven-public/" }
+}
+
+dependencies {
+    // 这里我按常规 MC 插件写
+    // 如果你需要，我可以按你的 pom.xml 精确生成
+    compileOnly 'io.papermc.paper:paper-api:1.20.1-R0.1-SNAPSHOT'
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+jar {
+    archiveBaseName.set('CDKer')
+    destinationDirectory.set(file('build/libs')) // 与 maven 的 target 完全不冲突
+}
